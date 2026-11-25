@@ -14,9 +14,9 @@ RUN wget -qO - https://dist.ipfs.tech/kubo/v0.29.0/kubo_v0.29.0_linux-amd64.tar.
 	&& rm -rf kubo
 RUN ipfs init
 
-ENV GIT_REPOSITORY=https://github.com/torndao777-eng/classic-ui.git
-# From development branch, double check with tornadocash.eth.limo
-ENV GIT_COMMIT_HASH=8af0abd14d7eeb734f943b968ce687cb5946eac6
+ENV GIT_REPOSITORY=https://github.com/torn-boy/classic-ui.git
+# Pin the UI revision with the Ethereum and BSC relayer version checks.
+ENV GIT_COMMIT_HASH=617de9841faa7fc3275350e1588198e294534112
 
 # clone the repository
 RUN mkdir /app/
